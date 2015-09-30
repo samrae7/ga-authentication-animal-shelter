@@ -1,0 +1,25 @@
+<h2>Add an animal</h2>
+<form id='add_animal' action ='/animals' method='post'>
+  <input type='text' name='name' placeholder='name'>
+  <input type='text' name='breed' placeholder='breed'>
+  <input type="date" name="dob">
+  <input type='text' name='gender' placeholder='gender'>
+  <input type='text' name='status' placeholder='status (orphan or adopted'>
+  <input type='submit'>
+</form>
+
+
+<% animals.forEach(function(animal, index){ %>
+  <div class='animal-container'>
+    <p>
+      <span class='field'>Name: </span><%=animal.name%><br>
+      Breed: <%=animal.breed%><br>
+      <span class='field'>DOB: </span><%=animal.formatDate()%><br>
+      <span class='field'>Gender: </span><%=animal.gender%><br>
+      <span class='field'>Family: </span><%=animal.family%><br>
+      <span class='field'>Status: </span><%=animal.status%><br>
+      <%- link_to(animal.linkName(), '/animals/'+ animal.id + '/' + animal.linkName()) %> 
+    </p>
+  </div>
+<% }) %>
+  

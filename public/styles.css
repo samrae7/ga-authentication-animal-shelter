@@ -1,0 +1,19 @@
+.page-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.animal-container{
+  border: dotted 1px black;
+  width:23%;
+  float:left;
+  padding:20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.field {
+  font-weight: bold;
+}
